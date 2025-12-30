@@ -1,30 +1,37 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import { Suspense } from "react"
-import "./globals.css"
+import type { Metadata } from "next";
+import Script from "next/script";
+import "./global.css";
+import "./globals.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import { siteMetadata } from "./metadata";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-})
-
-export const metadata: Metadata = {
-  title: "Mayfair Tech AI - AI, E-business & Logistics Solutions",
-  description: "Leading provider of AI, E-business, and Logistics solutions for modern enterprises",
-  generator: "v0.app",
-}
+export const metadata: Metadata = siteMetadata;
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans ${inter.variable}`}>
-        <Suspense fallback={null}>{children}</Suspense>
+      <head>
+        {/* Adobe Fonts - Deuterium Variable */}
+        <link rel="stylesheet" href="https://use.typekit.net/XXXXXXX.css" />
+      </head>
+      <body className="antialiased">
+        <div className="site-wrapper">
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </div>
+        {/* Chatbot Widget */}
+        <Script
+          src="https://embed-widget-nine.vercel.app/widget.js"
+          data-org-id="G3uyRBGv0s"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
-  )
+  );
 }

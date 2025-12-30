@@ -1,136 +1,487 @@
 @import "tailwindcss";
-@import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
+/* Tailwind CSS v4 Theme Configuration - Configure fonts for Tailwind utility classes */
+/* stylelint-disable-next-line at-rule-no-unknown */
+@theme {
+  --font-family-sans: "deuterium-variable", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-family-serif: "deuterium-variable", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-family-mono: "deuterium-variable", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
 
 :root {
-  /* Updated color tokens to match Mayfair Tech AI design brief */
-  --background: #ffffff;
-  --foreground: #000000; /* Updated to simple black text */
-  --card: #ffffff;
-  --card-foreground: #000000; /* Updated to simple black text */
-  --popover: #ffffff;
-  --popover-foreground: #000000; /* Updated to simple black text */
-  --primary: #0f3e3e; /* deep teal from logo wordmark */
-  --primary-foreground: #ffffff;
-  --secondary: #f3f4f6;
-  --secondary-foreground: #000000; /* Updated to simple black text */
-  --muted: #6b7280;
-  --muted-foreground: #000000; /* Updated to simple black text */
-  --accent: #64f064; /* neon green from logo mark */
-  --accent-foreground: #0f3e3e;
-  --destructive: #dc2626;
-  --destructive-foreground: #ffffff;
-  --border: #e5e7eb;
-  --input: #ffffff; /* Updated to simple white background */
-  --ring: #0f3e3e;
-  --chart-1: #0f3e3e;
-  --chart-2: #059669;
-  --chart-3: #000000; /* Updated to simple black text */
-  --chart-4: #f3f4f6;
-  --chart-5: #dc2626;
-  --radius: 0.5rem;
-  --sidebar: #ffffff;
-  --sidebar-foreground: #000000; /* Updated to simple black text */
-  --sidebar-primary: #0f3e3e; /* deep teal from logo wordmark */
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #059669;
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #e5e7eb;
-  --sidebar-ring: #0f3e3e;
+  --background: var(--primary-dark);
+  --foreground: #f5f7ff;
+  --surface: #0d2247;
+  --font-family: "deuterium-variable", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
 }
 
-.dark {
-  --background: #ffffff; /* Updated to simple white background */
-  --foreground: #000000; /* Updated to simple black text */
-  --card: #ffffff; /* Updated to simple white background */
-  --card-foreground: #000000; /* Updated to simple black text */
-  --popover: #ffffff; /* Updated to simple white background */
-  --popover-foreground: #000000; /* Updated to simple black text */
-  --primary: #0f3e3e; /* deep teal from logo wordmark */
-  --primary-foreground: #ffffff;
-  --secondary: #f3f4f6;
-  --secondary-foreground: #000000; /* Updated to simple black text */
-  --muted: #6b7280;
-  --muted-foreground: #000000; /* Updated to simple black text */
-  --accent: #64f064; /* neon green from logo mark */
-  --accent-foreground: #0f3e3e;
-  --destructive: #dc2626;
-  --destructive-foreground: #ffffff;
-  --border: #e5e7eb;
-  --input: #ffffff; /* Updated to simple white background */
-  --ring: #0f3e3e;
-  --chart-1: #0f3e3e;
-  --chart-2: #10b981;
-  --chart-3: #000000; /* Updated to simple black text */
-  --chart-4: #f3f4f6;
-  --chart-5: #dc2626;
-  --sidebar: #ffffff; /* Updated to simple white background */
-  --sidebar-foreground: #000000; /* Updated to simple black text */
-  --sidebar-primary: #0f3e3e; /* deep teal from logo wordmark */
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #10b981;
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #e5e7eb;
-  --sidebar-ring: #0f3e3e;
-}
-
-@theme inline {
-  /* Updated to use Inter font instead of Geist */
-  --font-sans: var(--font-inter);
-  --font-mono: var(--font-geist-mono);
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
-}
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #030915;
+    --foreground: #f6f7fb;
+    --surface: #051024;
   }
-  body {
-    @apply bg-background text-foreground;
-  }
+}
 
-  h1:hover,
-  h2:hover,
-  h3:hover,
-  h4:hover,
-  h5:hover,
-  h6:hover {
-    @apply text-primary;
+* {
+  box-sizing: border-box;
+}
+
+/* Apply Deuterium Variable font to all elements */
+* {
+  font-family: var(--font-family);
+}
+
+html,
+body {
+  font-family: var(--font-family);
+}
+
+/* Explicit font application for all common elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div,
+a,
+button,
+input,
+textarea,
+select,
+label,
+li,
+ul,
+ol,
+td,
+th,
+table,
+article,
+section,
+nav,
+header,
+footer,
+aside,
+main,
+figure,
+figcaption,
+blockquote,
+code,
+pre,
+kbd,
+samp,
+mark,
+small,
+strong,
+em,
+b,
+i,
+u,
+s,
+sub,
+sup {
+  font-family: var(--font-family);
+}
+
+/* Form elements and interactive elements */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+textarea,
+select,
+button,
+option,
+optgroup {
+  font-family: var(--font-family);
+}
+
+/* Placeholder text */
+::placeholder {
+  font-family: var(--font-family);
+}
+
+::-webkit-input-placeholder {
+  font-family: var(--font-family);
+}
+
+::-moz-placeholder {
+  font-family: var(--font-family);
+}
+
+:-ms-input-placeholder {
+  font-family: var(--font-family);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-family);
+}
+
+.site-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
+.site-footer {
+  padding: 1.5rem 2rem;
+  background: var(--primary-dark);
+  color: var(--foreground);
+}
+
+.site-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(90deg, var(--deep-teal), var(--forest-green));
+}
+
+.placeholder {
+  color: var(--slate);
+}
+
+/* ========================================
+   Deuterium Variable Font - Custom Utilities
+   ======================================== */
+
+/* Variable Font Weight Utilities (Optional)
+   Use these classes for precise weight control beyond standard font-weight values
+   The "wght" axis accepts values from 100 to 900 */
+
+.font-variation-thin {
+  font-variation-settings: "wght" 100;
+}
+
+.font-variation-extralight {
+  font-variation-settings: "wght" 200;
+}
+
+.font-variation-light {
+  font-variation-settings: "wght" 300;
+}
+
+.font-variation-regular {
+  font-variation-settings: "wght" 400;
+}
+
+.font-variation-medium {
+  font-variation-settings: "wght" 500;
+}
+
+.font-variation-semibold {
+  font-variation-settings: "wght" 600;
+}
+
+.font-variation-bold {
+  font-variation-settings: "wght" 700;
+}
+
+.font-variation-extrabold {
+  font-variation-settings: "wght" 800;
+}
+
+.font-variation-black {
+  font-variation-settings: "wght" 900;
+}
+
+/* Custom intermediate weights for fine-tuned typography */
+.font-variation-350 {
+  font-variation-settings: "wght" 350;
+}
+
+.font-variation-450 {
+  font-variation-settings: "wght" 450;
+}
+
+.font-variation-550 {
+  font-variation-settings: "wght" 550;
+}
+
+.font-variation-650 {
+  font-variation-settings: "wght" 650;
+}
+
+.font-variation-750 {
+  font-variation-settings: "wght" 750;
+}
+
+.font-variation-850 {
+  font-variation-settings: "wght" 850;
+}
+
+/* ========================================
+   Responsive & Touch Device Support
+   ======================================== */
+
+/* Ensure animations work on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  /* Make solution cards touchable */
+  .group {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease-out !important;
+  }
+  
+  /* Touch devices - use active states instead of hover */
+  .group:active,
+  button:active,
+  a:active {
+    transform: scale(0.98);
+    transition: all 0.15s ease-out !important;
+  }
+  
+  /* Faster transitions for all child elements on touch */
+  .group * {
+    transition-duration: 0.2s !important;
+    transition-timing-function: ease-out !important;
+  }
+  
+  /* Ensure smooth return animation when touch ends */
+  .group:not(:active) * {
+    transition-duration: 0.2s !important;
+    transition-timing-function: ease-out !important;
+  }
+  
+  /* Enable hover-like effects on touch for cards */
+  .group:active .group-hover\:translate-x-1 {
+    transform: translateX(0.25rem);
+  }
+  
+  .group:active .group-hover\:-translate-y-2 {
+    transform: translateY(-0.5rem);
+  }
+  
+  /* Solution card specific animations - faster transitions */
+  .group:active .group-hover\:scale-110 {
+    transform: scale(1.1);
+    transition: transform 0.15s ease-out !important;
+  }
+  
+  .group:active .group-hover\:scale-105 {
+    transform: scale(1.05);
+    transition: transform 0.15s ease-out !important;
+  }
+  
+  .group:active .group-hover\:scale-125 {
+    transform: scale(1.25);
+    transition: transform 0.15s ease-out !important;
+  }
+  
+  .group:active .group-hover\:translate-x-2 {
+    transform: translateX(0.5rem);
+    transition: transform 0.15s ease-out !important;
+  }
+  
+  .group:active .group-hover\:rotate-2 {
+    transform: rotate(2deg);
+    transition: transform 0.15s ease-out !important;
+  }
+  
+  .group:active .group-hover\:rotate-12 {
+    transform: rotate(12deg);
+    transition: transform 0.15s ease-out !important;
+  }
+  
+  /* Universal touch color matching using data attributes and class patterns */
+  /* Background color changes */
+  *:active[class*="hover:bg-white"] {
+    background-color: white !important;
+  }
+  
+  *:active[class*="hover:bg-[#5dd840]"] {
+    background-color: #5dd840 !important;
+  }
+  
+  *:active[class*="hover:bg-white/20"] {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+  }
+  
+  *:active[class*="hover:bg-white/15"] {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+  }
+  
+  /* Border color changes */
+  *:active[class*="hover:border-[#6fee51]"] {
+    border-color: #6fee51 !important;
+  }
+  
+  *:active[class*="hover:border-white/50"] {
+    border-color: rgba(255, 255, 255, 0.5) !important;
+  }
+  
+  /* Text color changes */
+  *:active[class*="hover:text-[#6fee51]"] {
+    color: #6fee51 !important;
+  }
+  
+  *:active[class*="hover:text-white"] {
+    color: white !important;
+  }
+  
+  /* Group hover effects - child elements */
+  .group:active *[class*="group-hover:text-[#6fee51]"] {
+    color: #6fee51 !important;
+  }
+  
+  .group:active *[class*="group-hover:text-white"] {
+    color: white !important;
+  }
+  
+  .group:active *[class*="group-hover:bg-[#6fee51]"] {
+    background-color: #6fee51 !important;
+  }
+  
+  .group:active *[class*="group-hover:bg-white"] {
+    background-color: white !important;
+  }
+  
+  .group:active *[class*="group-hover:bg-white/20"] {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+  }
+  
+  .group:active *[class*="group-hover:bg-white/15"] {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+  }
+  
+  .group:active *[class*="group-hover:border-[#6fee51]"] {
+    border-color: #6fee51 !important;
+  }
+  
+  .group:active *[class*="group-hover:border-white/50"] {
+    border-color: rgba(255, 255, 255, 0.5) !important;
+  }
+  
+  /* Solution card specific color changes - faster transitions */
+  .group:active *[class*="group-hover:bg-[#2ea82b]"] {
+    background-color: #2ea82b !important;
+    transition: background-color 0.15s ease-out !important;
+  }
+  
+  .group:active *[class*="group-hover:text-[#2ea82b]"] {
+    color: #2ea82b !important;
+    transition: color 0.15s ease-out !important;
+  }
+  
+  .group:active *[class*="group-hover:border-[#2ea82b]"] {
+    border-color: #2ea82b !important;
+    transition: border-color 0.15s ease-out !important;
+  }
+  
+  /* Opacity changes - faster */
+  .group:active *[class*="group-hover:opacity-40"] {
+    opacity: 0.4 !important;
+    transition: opacity 0.15s ease-out !important;
+  }
+  
+  /* Shadow effects */
+  *:active[class*="hover:shadow-2xl"] {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+  }
+  
+  *:active[class*="hover:shadow-xl"] {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+  }
+  
+  *:active[class*="hover:shadow-[#6fee51]"] {
+    box-shadow: 0 20px 25px -5px rgba(111, 238, 81, 0.2), 0 10px 10px -5px rgba(111, 238, 81, 0.04) !important;
+  }
+  
+  /* Solution card shadow with color */
+  .group:active *[class*="group-hover:shadow-[#2ea82b]/30"] {
+    box-shadow: 0 25px 50px -12px rgba(46, 168, 43, 0.3) !important;
+  }
+  
+  /* Common button patterns */
+  button[class*="bg-[#6fee51]"]:active:not([class*="hover:bg-[#5dd840]"]) {
+    background-color: white !important;
+  }
+  
+  a[class*="bg-[#6fee51]"]:active:not([class*="hover:bg-[#5dd840]"]) {
+    background-color: white !important;
+  }
+  
+  /* Transparent backgrounds */
+  .bg-white\/10:active:not([class*="hover:bg-white/15"]) {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+  }
+  
+  /* Borders */
+  .border-white\/30:active:not([class*="hover:border-white/50"]) {
+    border-color: rgba(255, 255, 255, 0.5) !important;
+  }
+  
+  .border-gray-200:active,
+  .border-gray-300:active {
+    border-color: #6fee51 !important;
+  }
+  
+  /* Our Process section cards - magnify on touch */
+  /* Text cards */
+  div:active[class*="hover:scale-105"][class*="rounded-2xl"][class*="border"] {
+    transform: scale(1.05) !important;
+  }
+  
+  /* Image cards */
+  .group:active[class*="hover:scale-105"] {
+    transform: scale(1.05) !important;
+  }
+}
+
+/* Prevent horizontal scroll on mobile */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Ensure canvas and images are responsive */
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Touch-friendly tap targets */
+@media (max-width: 768px) {
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Smooth scrolling for all devices */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
