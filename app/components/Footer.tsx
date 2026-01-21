@@ -88,6 +88,17 @@ export default function Footer() {
                 priority
               />
             </Link>
+            {/* Second Logo */}
+            <div className="mt-4">
+              <Image
+                src="/images/logo/mayfair-2nd-logo-footer.png"
+                alt="A mayfair company"
+                width={150}
+                height={40}
+                className="h-auto w-auto"
+                priority
+              />
+            </div>
             <p className="mt-3 text-sm text-white/70">
               AI & ML Solutions
             </p>
