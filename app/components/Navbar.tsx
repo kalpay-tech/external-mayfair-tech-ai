@@ -27,13 +27,24 @@ export default function Navbar() {
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4">
         
         {/* Logo */}
-        <Link href="/" className="flex items-center" onClick={closeMenu}>
+        <Link href="/" className="flex items-center gap-4" onClick={closeMenu}>
           <Image
             src="/images/logo/mayfair-logo.png"
             alt="MayfairTech.ai"
             width={160}
             height={40}
             className="h-10 w-auto"
+            priority
+          />
+          {/* Divider */}
+          <div className="h-8 w-px bg-[#081b3e]"></div>
+          {/* Second Logo */}
+          <Image
+            src="/images/logo/mayfair-2nd-logo-navbar.png"
+            alt="A mayfair company"
+            width={120}
+            height={35}
+            className="h-8 w-auto"
             priority
           />
         </Link>
