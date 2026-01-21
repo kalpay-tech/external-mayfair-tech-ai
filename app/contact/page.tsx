@@ -353,18 +353,25 @@ function ContactSection() {
 function OfficesSection() {
   const offices = [
     {
-      city: "Dubai, UAE",
-      label: "Our Dubai Office Location",
-      address: "FOAM0658 Compass Building, Al Shohada Road, AL Hamra Industrial Zone-FZ, Ras Al Khaimah, United Arab Emirates",
-      flag: "🇦🇪",
-      features: ["Regional HQ", "Client Meetings", "Enterprise Support"],
-    },
-    {
       city: "Lahore, Pakistan",
       label: "Our Lahore Office Location",
-      address: "Asian Food Industries Limited, 46-49 Industrial Area, Gulberg-lll, Lahore, Pakistan",
+      address: "Dars Road, Off Manga Road, Raiwind, Lahore, Pakistan.",
       flag: "🇵🇰",
       features: ["Development Center", "Operations Hub", "Training Facility"],
+    },
+    {
+      city: "Karachi, Pakistan",
+      label: "Our Karachi Office Location",
+      address: "The Hive - NASTP | Room # 4, 3rd Floor, Faisal Cantonment | Shahrah e Faisal, Karachi Pakistan.",
+      flag: "🇵🇰",
+      features: ["Tech Hub", "Innovation Center", "Business Operations"],
+    },
+    {
+      city: "Ras Al Khaimah, UAE",
+      label: "Our UAE Office Location",
+      address: "FOAM0658 Compass Building, Al Shohada Road, AL Hamra Industrial Zone-FZ, Ras Al Khaimah, UAE",
+      flag: "🇦🇪",
+      features: ["Regional HQ", "Client Meetings", "Enterprise Support"],
     },
   ];
 
@@ -384,7 +391,10 @@ function OfficesSection() {
           {offices.map((office, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-3xl border border-white/20 bg-white/10 p-8 backdrop-blur transition hover:bg-white/15"
+              className={`group relative overflow-hidden rounded-3xl border border-white/20 bg-white/10 p-8 backdrop-blur transition hover:bg-white/15 ${
+                index === 2 ? "lg:col-span-2 lg:mx-auto" : ""
+              }`}
+              style={index === 2 ? { maxWidth: 'calc(50% - 1rem)' } : {}}
             >
               {/* Decorative Elements */}
               

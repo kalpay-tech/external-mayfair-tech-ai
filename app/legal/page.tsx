@@ -231,11 +231,14 @@ Our team will work with you to resolve valid claims efficiently and fairly.
 
 **Email:** support@mayfair.com.pk
 
-**Dubai Office:**
-FOAM0658 Compass Building, Al Shohada Road, AL Hamra Industrial Zone-FZ, Ras Al Khaimah, UAE
-
 **Lahore Office:**
-Asian Food Industries Limited, 46-49 Industrial Area, Gulberg-lll, Lahore, Pakistan`,
+Dars Road, Off Manga Road, Raiwind, Lahore, Pakistan.
+
+**Karachi Office:**
+The Hive - NASTP | Room # 4, 3rd Floor, Faisal Cantonment | Shahrah e Faisal, Karachi Pakistan.
+
+**UAE Office:**
+FOAM0658 Compass Building, Al Shohada Road, AL Hamra Industrial Zone-FZ, Ras Al Khaimah, UAE`,
     },
   ];
 
@@ -389,11 +392,14 @@ Your continued use of our services after changes constitutes acceptance of the m
 
 **Email:** support@mayfair.com.pk
 
-**Dubai Office:**
-FOAM0658 Compass Building, Al Shohada Road, AL Hamra Industrial Zone-FZ, Ras Al Khaimah, UAE
-
 **Lahore Office:**
-Asian Food Industries Limited, 46-49 Industrial Area, Gulberg-lll, Lahore, Pakistan`,
+Dars Road, Off Manga Road, Raiwind, Lahore, Pakistan.
+
+**Karachi Office:**
+The Hive - NASTP | Room # 4, 3rd Floor, Faisal Cantonment | Shahrah e Faisal, Karachi Pakistan.
+
+**UAE Office:**
+FOAM0658 Compass Building, Al Shohada Road, AL Hamra Industrial Zone-FZ, Ras Al Khaimah, UAE`,
     },
   ];
 

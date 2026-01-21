@@ -192,7 +192,15 @@ export default function Footer() {
                 </a>
               </li>
 
-              <li>Asian Food Industries Limited, 46-49 Industrial Area, Gulberg-lll, Lahore, Pakistan</li>
+              <li className="leading-relaxed">
+                <strong className="text-white">Lahore:</strong> Dars Road, Off Manga Road, Raiwind, Lahore, Pakistan.
+              </li>
+              <li className="leading-relaxed">
+                <strong className="text-white">Karachi:</strong> The Hive - NASTP | Room # 4, 3rd Floor, Faisal Cantonment | Shahrah e Faisal, Karachi Pakistan.
+              </li>
+              <li className="leading-relaxed">
+                <strong className="text-white">UAE:</strong> FOAM0658 Compass Building, Al Shohada Road, AL Hamra Industrial Zone-FZ, Ras Al Khaimah, UAE
+              </li>
               <li>
                 <Link
                   href="/contact"
