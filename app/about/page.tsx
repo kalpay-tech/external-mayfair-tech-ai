@@ -87,7 +87,16 @@ function AboutSection() {
               About MayfairTech.AI
             </h2>
 
-            <div className="space-y-4 text-[#707e8a] leading-relaxed">
+            {/* Mayfair Company Logo */}
+            <div className="flex justify-start items-center py-2 mb-2">
+              <img
+                src="/images/logo/mayfair-2nd-logo-navbar.png"
+                alt="A Mayfair Company"
+                className="h-12 w-auto"
+              />
+            </div>
+
+            <div className="space-y-4 text-[#707e8a] leading-relaxed text-justify">
               <p className="text-lg">
                 MayfairTech.AI, a venture of the Mayfair Group (est. 1969), blends Artificial
                 Intelligence, eBusiness, and Smart Logistics to build intelligent, end-to-end digital

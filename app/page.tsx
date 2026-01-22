@@ -389,7 +389,7 @@ function ServiceCard({
 
       {/* Content */}
       <div className="flex flex-1 flex-col p-6">
-        <p className="mb-4 text-sm leading-relaxed text-[#707e8a]">{service.description}</p>
+        <p className="mb-4 text-sm leading-relaxed text-[#707e8a] text-justify">{service.description}</p>
 
         {/* Features List */}
         <div className="mb-6 space-y-2">
@@ -616,7 +616,7 @@ function Testimonials() {
             </h3>
 
             {/* Description */}
-            <p className="mb-8 text-lg leading-relaxed text-[#707e8a]">
+            <p className="mb-8 text-lg leading-relaxed text-[#707e8a] text-justify">
               Mayfair Highstreet is our flagship e-commerce product — a complete AI-driven shopping experience that brings global brands to customers with local payment options, instant personalization, and seamless cross-border delivery. Built and powered by MayfairTech.ai.
             </p>
 
