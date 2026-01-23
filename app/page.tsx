@@ -192,13 +192,6 @@ function HeroSection() {
             Transformation Company
           </span>
         </h1>
-        {/* <h1 className="mb-6 text-4xl font-light leading-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
-          AI & Digital
-          <br />
-          <span className="text-[#6fee51]">
-            Transformation Company | E-Business, Logistics Solutions
-          </span>
-        </h1> */}
 
         <p className="mb-8 max-w-3xl text-lg text-white/80 sm:text-xl">
           MayfairTech.ai delivers enterprise-grade AI, digital transformation, e-business development, and logistics technology solutions for global businesses.
@@ -646,7 +639,9 @@ function Testimonials() {
 
             {/* CTA Button */}
             <Link
-              href="/products/mayfair-highstreet"
+              href="https://mayfairhighstreet.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 rounded-full bg-[#6fee51] px-8 py-4 text-base font-semibold text-[#081b3e] shadow-lg transition hover:bg-[#5dd840] hover:shadow-xl"
             >
               Explore Mayfair Highstreet

@@ -188,7 +188,9 @@ export function ProductSection() {
             {/* CTA Button */}
             <div className="pt-4">
               <Link
-                href="/products/mayfair-highstreet"
+                href="https://mayfairhighstreet.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 rounded-full bg-[#6fee51] px-8 py-4 text-base font-semibold text-[#081b3e] shadow-lg transition hover:bg-white hover:shadow-xl"
               >
                 Explore Mayfair Highstreet

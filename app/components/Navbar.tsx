@@ -42,9 +42,9 @@ export default function Navbar() {
           <Image
             src="/images/logo/mayfair-2nd-logo-navbar.png"
             alt="A mayfair company"
-            width={120}
-            height={35}
-            className="h-8 w-auto"
+            width={100}
+            height={30}
+            className="h-7 w-auto"
             priority
           />
         </Link>
